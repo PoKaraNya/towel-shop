@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "Name": "Постільна білизна зі 100% бавовни",
+    "Description": "Комплект постільної білизни, який забезпечить комфортний сон.",
+    "PictureUrl": "https://example.com/images/bedding.jpg",
+    "Price": 500,
+    "Count": 50,
+    "CreatedAt": "2024-01-13T12:00:00",
+    "UpdatedAt": "2024-01-13T14:30:00",
+    "ProductCategoryId": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Рушник з мікрофібри",
+    "Description": "Легкий та швидкосохнучий рушник для повсякденного використання.",
+    "PictureUrl": "https://example.com/images/towel.jpg",
+    "Price": 200,
+    "Count": 100,
+    "CreatedAt": "2024-01-13T13:15:00",
+    "UpdatedAt": "2024-01-13T15:45:00",
+    "ProductCategoryId": 2
+  },
+  {
+    "Id": 3,
+    "Name": "Штори з лляного полотна",
+    "Description": "Елегантні штори, які додають затишок вашому дому.",
+    "PictureUrl": "https://example.com/images/curtains.jpg",
+    "Price": 700,
+    "Count": 30,
+    "CreatedAt": "2024-01-13T14:30:00",
+    "UpdatedAt": "2024-01-13T16:00:00",
+    "ProductCategoryId": 3
+  },
+  {
+    "Id": 4,
+    "Name": "Покривало з антиалергенного матеріалу",
+    "Description": "Легке та гіпоалергенне покривало для затишку в спальні.",
+    "PictureUrl": "https://example.com/images/blanket.jpg",
+    "Price": 600,
+    "Count": 40,
+    "CreatedAt": "2024-01-13T15:45:00",
+    "UpdatedAt": "2024-01-13T17:15:00",
+    "ProductCategoryId": 1
+  },
+  {
+    "Id": 5,
+    "Name": "Килимок для ванної кімнати",
+    "Description": "М'який килимок для приємного відчуття під ногами ванної кімнати.",
+    "PictureUrl": "https://example.com/images/bathroom_mat.jpg",
+    "Price": 300,
+    "Count": 60,
+    "CreatedAt": "2024-01-13T16:30:00",
+    "UpdatedAt": "2024-01-13T18:00:00",
+    "ProductCategoryId": 4
+  },
+  {
+    "Id": 6,
+    "Name": "Столовий сервіз з натуральної кераміки",
+    "Description": "Елегантний сервіз для особливих випадків.",
+    "PictureUrl": "https://example.com/images/dinnerware.jpg",
+    "Price": 800,
+    "Count": 20,
+    "CreatedAt": "2024-01-13T17:45:00",
+    "UpdatedAt": "2024-01-13T19:15:00",
+    "ProductCategoryId": 5
+  },
+  {
+    "Id": 7,
+    "Name": "Наматрацник Memory Foam",
+    "Description": "Ергономічний наматрацник для комфортного сну.",
+    "PictureUrl": "https://example.com/images/mattress_topper.jpg",
+    "Price": 900,
+    "Count": 15,
+    "CreatedAt": "2024-01-13T18:30:00",
+    "UpdatedAt": "2024-01-13T20:00:00",
+    "ProductCategoryId": 6
+  },
+  {
+    "Id": 8,
+    "Name": "Полотенце для пляжу",
+    "Description": "Яскраве полотенце для приємного відпочинку на пляжі.",
+    "PictureUrl": "https://example.com/images/beach_towel.jpg",
+    "Price": 250,
+    "Count": 80,
+    "CreatedAt": "2024-01-13T19:45:00",
+    "UpdatedAt": "2024-01-13T21:15:00",
+    "ProductCategoryId": 2
+  },
+  {
+    "Id": 9,
+    "Name": "Кухонна рушникова набір",
+    "Description": "Набір рушників для кухні для зручного використання.",
+    "PictureUrl": "https://example.com/images/kitchen_towels.jpg",
+    "Price": 150,
+    "Count": 120,
+    "CreatedAt": "2024-01-13T20:30:00",
+    "UpdatedAt": "2024-01-13T22:00:00",
+    "ProductCategoryId": 7
+  },
+  {
+    "Id": 10,
+    "Name": "Килим для вітальні зі шерсті",
+    "Description": "Елегантний килим для вітальні, створений зі шерсті.",
+    "PictureUrl": "https://example.com/images/living_room_rug.jpg",
+    "Price": 1200,
+    "Count": 25,
+    "CreatedAt": "2024-01-13T21:45:00",
+    "UpdatedAt": "2024-01-13T23:15:00",
+    "ProductCategoryId": 4
+  }
+]
