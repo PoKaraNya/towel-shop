@@ -12,6 +12,10 @@ public interface IProductRepository
     Task<Product> GetProductByIdAsync(int id);
     Task<IReadOnlyList<Product>> GetProductsAsync();
 
+    //Task<IReadOnlyList<Category>> GetCategoryByIdAsync();
+    Task<IReadOnlyList<Category>> GetCategoriesAsync();
+   
+
 
 }
 

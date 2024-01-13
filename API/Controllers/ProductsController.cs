@@ -32,4 +32,11 @@ public class ProductsController : ControllerBase
         var product = await _rep.GetProductByIdAsync(id);
         return product;
     }
+
+    [HttpGet("categories")]
+    public async Task<ActionResult<IReadOnlyList<Category>>> GetCategories()
+    {
+        return Ok(await _rep.GetCategoriesAsync());
+    }
+
 }
