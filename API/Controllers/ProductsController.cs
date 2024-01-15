@@ -1,10 +1,7 @@
-﻿using API.Data;
-using Core.Entities;
+﻿using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
+using Core.Specifications;
 
 namespace API.Controllers;
 
@@ -14,6 +11,7 @@ public class ProductsController : ControllerBase
 {
     private readonly IGenericRepository<Category> _categoryRepo;
     private readonly IGenericRepository<Product> _productRepo;
+
     public ProductsController(
         IGenericRepository<Product> productRepo,
         IGenericRepository<Category> categoryRepo)
@@ -22,18 +20,19 @@ public class ProductsController : ControllerBase
         _productRepo = productRepo;
     }
 
-
     [HttpGet]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
-       var products = await _productRepo.ListAllAsync();
-       return Ok(products);
+        var spec = new ProductsWithCategoriesSpecification();
+        var products = await _productRepo.ListAsync(spec);
+        return Ok(products);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
-        var product = await _productRepo.GetByIdAsync(id);
+        var spec =  new ProductsWithCategoriesSpecification(id);
+        var product = await _productRepo.GetEntityWithSpec(spec);
         return product;
     }
 
@@ -42,5 +41,4 @@ public class ProductsController : ControllerBase
     {
         return Ok(await _categoryRepo.ListAllAsync());
     }
-
 }
