@@ -12,31 +12,35 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 public class ProductsController : ControllerBase
 {
-    private readonly IProductRepository _rep;
-    public ProductsController(IProductRepository rep)
+    private readonly IGenericRepository<Category> _categoryRepo;
+    private readonly IGenericRepository<Product> _productRepo;
+    public ProductsController(
+        IGenericRepository<Product> productRepo,
+        IGenericRepository<Category> categoryRepo)
     {
-        _rep = rep;
+        _categoryRepo = categoryRepo;
+        _productRepo = productRepo;
     }
 
 
     [HttpGet]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
-       var products = await _rep.GetProductsAsync();
+       var products = await _productRepo.ListAllAsync();
        return Ok(products);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
-        var product = await _rep.GetProductByIdAsync(id);
+        var product = await _productRepo.GetByIdAsync(id);
         return product;
     }
 
     [HttpGet("categories")]
     public async Task<ActionResult<IReadOnlyList<Category>>> GetCategories()
     {
-        return Ok(await _rep.GetCategoriesAsync());
+        return Ok(await _categoryRepo.ListAllAsync());
     }
 
 }
