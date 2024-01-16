@@ -7,9 +7,7 @@ using Core.Specifications;
 
 namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController : ControllerBase
+public class ProductsController : BaseApiController
 {
     private readonly IMapper _mapper;
     private readonly IGenericRepository<Category> _categoryRepo;
