@@ -3,7 +3,7 @@
     "Id": 1,
     "Title": "Постільна білизна",
     "Description": "Все для комфортного сну: комплекти постільної білизни, наматрацники та покривала.",
-    "PictureUrl": "https://localhost:5001/images/categories/bedding.png",
+    "PictureUrl": "images/categories/bedding.png",
     "CreatedAt": "2024-01-13T12:00:00",
     "UpdatedAt": "2024-01-13T14:30:00"
   },
@@ -11,7 +11,7 @@
     "Id": 2,
     "Title": "Рушники",
     "Description": "М'які та швидкосохнучі рушники для повсякденного використання.",
-    "PictureUrl": "https://localhost:5001/images/categories/towels.png",
+    "PictureUrl": "images/categories/towels.png",
     "CreatedAt": "2024-01-13T13:15:00",
     "UpdatedAt": "2024-01-13T15:45:00"
   },
@@ -19,7 +19,7 @@
     "Id": 3,
     "Title": "Штори",
     "Description": "Елегантні штори для дому, які додають затишок та стиль.",
-    "PictureUrl": "https://localhost:5001/images/categories/curtains.png",
+    "PictureUrl": "images/categories/curtains.png",
     "CreatedAt": "2024-01-13T14:30:00",
     "UpdatedAt": "2024-01-13T16:00:00"
   },
@@ -27,7 +27,7 @@
     "Id": 4,
     "Title": "Килими",
     "Description": "М'які та стильні килими для різних приміщень.",
-    "PictureUrl": "https://localhost:5001/images/categories/rugs.png",
+    "PictureUrl": "images/categories/rugs.png",
     "CreatedAt": "2024-01-13T15:45:00",
     "UpdatedAt": "2024-01-13T17:15:00"
   },
@@ -35,7 +35,7 @@
     "Id": 5,
     "Title": "Посуд",
     "Description": "Елегантний посуд для особливих випадків та щоденного використання.",
-    "PictureUrl": "https://localhost:5001/images/categories/dinnerware.png",
+    "PictureUrl": "images/categories/dinnerware.png",
     "CreatedAt": "2024-01-13T16:30:00",
     "UpdatedAt": "2024-01-13T18:00:00"
   },
@@ -43,7 +43,7 @@
     "Id": 6,
     "Title": "Наматрацники",
     "Description": "Ергономічні наматрацники для покращення якості сну.",
-    "PictureUrl": "https://localhost:5001/images/categories/mattress_toppers.png",
+    "PictureUrl": "images/categories/mattress_toppers.png",
     "CreatedAt": "2024-01-13T17:45:00",
     "UpdatedAt": "2024-01-13T19:15:00"
   },
@@ -51,7 +51,7 @@
     "Id": 7,
     "Title": "Кухонні рушники",
     "Description": "Практичні та стильні рушники для кухні.",
-    "PictureUrl": "https://localhost:5001/images/categories/kitchen_towels.png",
+    "PictureUrl": "images/categories/kitchen_towels.png",
     "CreatedAt": "2024-01-13T18:30:00",
     "UpdatedAt": "2024-01-13T20:00:00"
   }
