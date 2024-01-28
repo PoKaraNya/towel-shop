@@ -9,7 +9,7 @@
           *ngFor="let sort of sortOptions"
           [value]="sort.value"
         >
-          {{sort.name}}
+          {{ sort.name }}
         </option>
       </select>
 
@@ -18,7 +18,7 @@
       <ul class="list-group my-3">
         <li class="list-group-item"
             *ngFor="let category of categories"
-            [class.active]="category.id === categoryIdSelected"
+            [class.active]="category.id === shopParams.categoryId"
             [value]="category.id"
             (click)="onCategorySelected(category.id)"
         >
@@ -41,10 +41,23 @@
         </div>
       </div>
 
-      <div class="row row-cols-3 g-3">
+      <div class="row row-cols-3 g-3 mb-5">
         <div class="col" *ngFor="let product of products">
           <app-product-item [product]="product"></app-product-item>
         </div>
+      </div>
+
+
+      <div class="d-flex justify-content-center">
+        <pagination [boundaryLinks]="true"
+                    [totalItems]="totalCount"
+                    [itemsPerPage]="shopParams.pageSize"
+                    [maxSize]="10"
+                    previousText="&lsaquo;"
+                    nextText="&rsaquo;"
+                    firstText="&laquo;"
+                    lastText="&raquo;">
+        </pagination>
       </div>
 
     </section>
