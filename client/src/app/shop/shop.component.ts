@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../shared/models/product";
 import {ShopService} from "./shop.service";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 import {Category} from "../shared/models/category";
+import {ShopParams} from "../shared/models/shopParams";
 
 @Component({
   selector: 'app-shop',
@@ -12,13 +12,13 @@ import {Category} from "../shared/models/category";
 export class ShopComponent implements OnInit {
   products: Product[] = [];
   categories: Category[] = [];
-  categoryIdSelected = 0;
-  sortSelected = 'name';
+  shopParams = new ShopParams();
   sortOptions = [
     {name: 'Alphabetical', value: 'name'},
     {name: 'Price: Low to high', value: 'priceAsc'},
     {name: 'Price: High to low', value: 'priceDesc'},
   ];
+  totalCount = 0;
 
   constructor(private shopService: ShopService) {
   }
@@ -29,8 +29,13 @@ export class ShopComponent implements OnInit {
   }
 
   getProducts() {
-    this.shopService.getProducts(this.categoryIdSelected, this.sortSelected).subscribe({
-      next: response => this.products = response.data,
+    this.shopService.getProducts(this.shopParams).subscribe({
+      next: response => {
+        this.products = response.data;
+        this.shopParams.pageNumber = response.pageIndex;
+        this.shopParams.pageSize = response.pageSize;
+        this.totalCount = response.pageCount;
+      },
       error: error => console.log(error)
     })
   }
@@ -53,13 +58,20 @@ export class ShopComponent implements OnInit {
   }
 
   onCategorySelected(categoryId: number) {
-    this.categoryIdSelected = categoryId;
+    this.shopParams.categoryId = categoryId;
     this.getProducts();
   }
 
   onSortSelected(event: any) {
-    this.sortSelected = event.target.value;
+    this.shopParams.sort = event.target.value;
     this.getProducts();
   }
 
+  onPageChanged(event: any) {
+    if (this.shopParams.pageNumber !== event){
+      this.shopParams.pageNumber = event;
+      this.getProducts();
+    }
+
+  }
 }
