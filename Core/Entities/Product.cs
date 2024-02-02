@@ -11,6 +11,5 @@
         public DateTime UpdatedAt { get; set; }
         public Category ProductCategory { get; set; }
         public int ProductCategoryId { get; set; }
-
     }
 }
