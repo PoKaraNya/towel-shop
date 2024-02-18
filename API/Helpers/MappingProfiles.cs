@@ -12,5 +12,7 @@ public class MappingProfiles : Profile
             .ForMember(d => d.ProductCategory,
                 o => o.MapFrom(s => s.ProductCategory.Title))
             .ForMember(d => d.PictureUrl, o => o.MapFrom<ProductUrlResolver>());
+        CreateMap<CustomerBasketDto, CustomerBasket>();
+        CreateMap<BasketItemDto, BasketItem>();
     }
 }
