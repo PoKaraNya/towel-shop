@@ -5,7 +5,7 @@ namespace Core.Interfaces;
 public interface IOrderService
 {
     Task<Order> CreateOrderAsync(string buyerEmail, int deliveryMethod, string basketId, Address shippingAddress);
-    Task<IReadOnlyList<Order>> GerOrdersForUserAsync(string buyerEmail);
+    Task<IReadOnlyList<Order>> GerOrdersForUserAsync();
     Task<Order> GetOrderByIdAsync(int id, string buyerEmail);
     Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync();
 }

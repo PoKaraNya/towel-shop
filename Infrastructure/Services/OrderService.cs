@@ -31,23 +31,23 @@ public class OrderService : IOrderService
         var deliveryMethod = await _unitOfWork.Repository<DeliveryMethod>().GetByIdAsync(deliveryMethodId);
         var subtotal = items.Sum(item => item.Price * item.Quantity);
         var order = new Order(items, buyerEmail, shippingAddress, deliveryMethod, subtotal);
-        _unitOfWork.Repository<Order>().Add(order);
+        // _unitOfWork.Repository<Order>().Add(order);
+        //
+        // var result = await _unitOfWork.Complete();
+        //
+        // if (result <= 0)
+        // {
+        //     return null;
+        // }
+        //
+        // await _basketRepo.DeleteBasketAsync(basketId);
 
-        var result = await _unitOfWork.Complete();
-
-        if (result <= 0)
-        {
-            return null;
-        }
-
-        await _basketRepo.DeleteBasketAsync(basketId);
-        
         return order;
     }
 
-    public Task<IReadOnlyList<Order>> GerOrdersForUserAsync(string buyerEmail)
+    public async Task<IReadOnlyList<Order>> GerOrdersForUserAsync()
     {
-        throw new NotImplementedException();
+        return await _unitOfWork.Repository<Order>().ListAllAsync();
     }
 
     public Task<Order> GetOrderByIdAsync(int id, string buyerEmail)

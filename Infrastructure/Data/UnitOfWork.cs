@@ -43,6 +43,5 @@ public class UnitOfWork : IUnitOfWork
         }
 
         return (IGenericRepository<TEntity>)_repositories[type];
-
     }
 }

@@ -33,6 +33,15 @@ public class OrdersController : BaseApiController
         return Ok(order);
     }
 
+    [HttpGet]
+    public async Task<ActionResult<IReadOnlyList<OrderToReturnDto>>> GetOrdersForUser()
+    {
+        //TODO
+        var email = "asdg";
+        var orders = await _orderService.GerOrdersForUserAsync();
+        return Ok(_mapper.Map<IReadOnlyList<OrderToReturnDto>>(orders));
+    }
+    
     [HttpGet("deliveryMethods")]
     public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
     {
