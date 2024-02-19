@@ -6,12 +6,12 @@ public class Order: BaseEntity
     {
     }
 
-    public Order(string buyerEmail, Address shipToAddress, DeliveryMethod deliveryMethod, IReadOnlyList<OrderItem> orderItems, int subtotal)
+    public Order(IReadOnlyList<OrderItem> orderItems, string buyerEmail, Address shipToAddress, DeliveryMethod deliveryMethod, int subtotal)
     {
+        OrderItems = orderItems;
         BuyerEmail = buyerEmail;
         ShipToAddress = shipToAddress;
         DeliveryMethod = deliveryMethod;
-        OrderItems = orderItems;
         Subtotal = subtotal;
     }
 

@@ -8,11 +8,8 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> builder)
     {
-        builder.OwnsOne(o => o.ShipToAddress, a =>
-        {
-            a.WithOwner();
-        });
-
+        builder.OwnsOne(o => o.ShipToAddress, a => { a.WithOwner(); });
+        builder.Navigation(a => a.ShipToAddress).IsRequired();
         builder.Property(s => s.Status)
             .HasConversion(
                 o => o.ToString(),

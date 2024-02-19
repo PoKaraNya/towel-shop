@@ -52,7 +52,10 @@ public class ProductsController : BaseApiController
     {
         var spec = new ProductsWithCategoriesSpecification(id);
         var product = await _productRepo.GetEntityWithSpec(spec);
-        if (product == null) return NotFound(new ApiResponse(404));
+        if (product == null)
+        {
+            return NotFound(new ApiResponse(404));
+        }
         return _mapper.Map<Product ,ProductToReturnDto>(product);
     }
 
