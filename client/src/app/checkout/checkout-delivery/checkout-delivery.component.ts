@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {FormGroup} from "@angular/forms";
+import {DeliveryMethod} from "../../shared/models/deliveryMethod";
+import {CheckoutService} from "../checkout.service";
+import {BasketService} from "../../basket/basket.service";
 
 @Component({
   selector: 'app-checkout-delivery',
@@ -6,5 +10,20 @@ import { Component } from '@angular/core';
   styleUrl: './checkout-delivery.component.scss'
 })
 export class CheckoutDeliveryComponent {
+  @Input() checkoutForm?: FormGroup;
+  deliveryMethods: DeliveryMethod[] = [];
+
+  constructor(private checkoutService: CheckoutService, private basketService: BasketService) {
+  }
+
+  ngOnInit(): void {
+    this.checkoutService.getDeliveryMethods().subscribe({
+      next: dm => this.deliveryMethods = dm
+    })
+  }
+
+  setShippingPrice(deliveryMethod: DeliveryMethod) {
+    this.basketService.setShippingPrice(deliveryMethod);
+  }
 
 }

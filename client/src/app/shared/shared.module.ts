@@ -9,6 +9,8 @@ import {StepperComponent} from './components/stepper/stepper.component';
 import {CdkStepperModule} from "@angular/cdk/stepper";
 import {TextInputComponent} from './components/text-input/text-input.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { BasketSummaryComponent } from './basket-summary/basket-summary.component';
+import {RouterLink, RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import {ReactiveFormsModule} from "@angular/forms";
     OrderTotalsComponent,
     TextInputComponent,
     StepperComponent,
+    BasketSummaryComponent,
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
     ReactiveFormsModule,
-    CdkStepperModule
+    CdkStepperModule,
+    RouterModule
   ],
   exports: [
     PaginationModule,
@@ -35,6 +39,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     TextInputComponent,
     StepperComponent,
     CdkStepperModule,
+    BasketSummaryComponent
   ]
 
 })
