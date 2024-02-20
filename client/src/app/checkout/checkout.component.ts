@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrl: './checkout.component.scss'
+  styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent {
+  constructor(private fb: FormBuilder) {}
 
+  checkoutForm = this.fb.group({
+    addressForm: this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      street: ['', Validators.required],
+      city: ['', Validators.required],
+    }),
+    deliveryForm: this.fb.group({
+      deliveryMethod: ['', Validators.required]
+    })
+  })
 }
