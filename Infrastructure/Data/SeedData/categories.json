@@ -1,57 +1,57 @@
 [
   {
     "Id": 1,
-    "Title": "Постільна білизна",
-    "Description": "Все для комфортного сну: комплекти постільної білизни, наматрацники та покривала.",
-    "PictureUrl": "images/categories/bedding.png",
+    "Title": "Linens",
+    "Description": "Everything for a comfortable sleep: bedding sets, mattress toppers and bedspreads.",
+    "PictureUrl": "images/categories/c1.jpg",
     "CreatedAt": "2024-01-13T12:00:00",
     "UpdatedAt": "2024-01-13T14:30:00"
   },
   {
     "Id": 2,
-    "Title": "Рушники",
-    "Description": "М'які та швидкосохнучі рушники для повсякденного використання.",
-    "PictureUrl": "images/categories/towels.png",
+    "Title": "Towels",
+    "Description": "Soft and quick-drying towels for everyday use.",
+    "PictureUrl": "images/categories/c2.jpg",
     "CreatedAt": "2024-01-13T13:15:00",
     "UpdatedAt": "2024-01-13T15:45:00"
   },
   {
     "Id": 3,
-    "Title": "Штори",
-    "Description": "Елегантні штори для дому, які додають затишок та стиль.",
-    "PictureUrl": "images/categories/curtains.png",
+    "Title": "Curtains",
+    "Description": "Elegant curtains for the home that add coziness and style.",
+    "PictureUrl": "images/categories/c3.jpg",
     "CreatedAt": "2024-01-13T14:30:00",
     "UpdatedAt": "2024-01-13T16:00:00"
   },
   {
     "Id": 4,
-    "Title": "Килими",
-    "Description": "М'які та стильні килими для різних приміщень.",
-    "PictureUrl": "images/categories/rugs.png",
+    "Title": "Carpets",
+    "Description": "Soft and stylish carpets for different rooms.",
+    "PictureUrl": "images/categories/c4.jpg",
     "CreatedAt": "2024-01-13T15:45:00",
     "UpdatedAt": "2024-01-13T17:15:00"
   },
   {
     "Id": 5,
-    "Title": "Посуд",
-    "Description": "Елегантний посуд для особливих випадків та щоденного використання.",
-    "PictureUrl": "images/categories/dinnerware.png",
+    "Title": "Dishes",
+    "Description": "Elegant tableware for special occasions and everyday use.",
+    "PictureUrl": "images/categories/c5.jpg",
     "CreatedAt": "2024-01-13T16:30:00",
     "UpdatedAt": "2024-01-13T18:00:00"
   },
   {
     "Id": 6,
-    "Title": "Наматрацники",
-    "Description": "Ергономічні наматрацники для покращення якості сну.",
-    "PictureUrl": "images/categories/mattress_toppers.png",
+    "Title": "Mattress toppers",
+    "Description": "Ergonomic mattress pads to improve sleep quality.",
+    "PictureUrl": "images/categories/c6.jpg",
     "CreatedAt": "2024-01-13T17:45:00",
     "UpdatedAt": "2024-01-13T19:15:00"
   },
   {
     "Id": 7,
-    "Title": "Кухонні рушники",
-    "Description": "Практичні та стильні рушники для кухні.",
-    "PictureUrl": "images/categories/kitchen_towels.png",
+    "Title": "Kitchen towels",
+    "Description": "Practical and stylish kitchen towels.",
+    "PictureUrl": "images/categories/c7.jpg",
     "CreatedAt": "2024-01-13T18:30:00",
     "UpdatedAt": "2024-01-13T20:00:00"
   }
