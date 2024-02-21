@@ -21,6 +21,7 @@ export class ShopComponent implements OnInit {
     {name: 'Price: High to low', value: 'priceDesc'},
   ];
   totalCount = 0;
+  selectedSortValue: string = '';
 
   constructor(private shopService: ShopService) {
   }
@@ -66,6 +67,7 @@ export class ShopComponent implements OnInit {
   }
 
   onSortSelected(event: any) {
+    this.selectedSortValue = event.target.value;
     this.shopParams.sort = event.target.value;
     this.getProducts();
   }

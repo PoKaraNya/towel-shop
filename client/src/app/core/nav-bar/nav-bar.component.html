@@ -6,13 +6,13 @@
       <img routerLink="/" src="/assets/images/logo.png" alt="logo" class="col-2 logo pe-4 justify-content-lg-start" style="max-height: 70px">
 
       <nav class="nav col-8 col-lg-auto mb-2 justify-content-center mb-md-0 text-uppercase fs-4 justify-content-lg-end">
-        <a routerLink="/" routerLinkActive="active" class="px-2"
+        <a routerLink="/" routerLinkActive="active" class="px-4"
            [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a routerLink="/shop" routerLinkActive="active" class="px-2">Shop</a>
-        <a routerLink="/basket" routerLinkActive="active" class="px-2">Basket</a>
+        <a routerLink="/shop" routerLinkActive="active" class="px-4">Shop</a>
+        <a routerLink="/basket" routerLinkActive="active" class="px-4">Basket</a>
       </nav>
 
-      <div class="col-1 d-flex align-items-center justify-content-lg-end">
+      <div class="col-1 d-flex align-items-center justify-content-lg-start">
         <a routerLink="/basket" class="position-relative">
           <i class="fa fa-shopping-cart fa-2x me-5 text-dark"></i>
           <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
