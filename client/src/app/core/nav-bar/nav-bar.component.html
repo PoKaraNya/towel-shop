@@ -1,23 +1,18 @@
 <header class="p-3 mb-3 border-bottom">
 
   <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
 
-      <img routerLink="/" src="/assets/images/logo.png" alt="logo" class="logo" style="max-height: 70px">
+      <img routerLink="/" src="/assets/images/logo.png" alt="logo" class="col-2 logo pe-4 justify-content-lg-start" style="max-height: 70px">
 
-      <nav class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 text-uppercase fs-4">
+      <nav class="nav col-8 col-lg-auto mb-2 justify-content-center mb-md-0 text-uppercase fs-4 justify-content-lg-end">
         <a routerLink="/" routerLinkActive="active" class="px-2"
-           [routerLinkActiveOptions]="{exact: true}"
-        >Home</a>
+           [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a routerLink="/shop" routerLinkActive="active" class="px-2">Shop</a>
-        <a routerLink="/test-error" routerLinkActive="active" class="px-2">Errors</a>
+        <a routerLink="/basket" routerLinkActive="active" class="px-2">Basket</a>
       </nav>
 
-      <!--      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">-->
-      <!--        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">-->
-      <!--      </form>-->
-
-      <div class="d-flex align-items-center">
+      <div class="col-1 d-flex align-items-center justify-content-lg-end">
         <a routerLink="/basket" class="position-relative">
           <i class="fa fa-shopping-cart fa-2x me-5 text-dark"></i>
           <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
@@ -25,12 +20,6 @@
           </div>
         </a>
       </div>
-
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-secondary me-2">Login</button>
-        <button type="button" class="btn btn-outline-secondary me-3">Sign-up</button>
-      </div>
-
     </div>
   </div>
 </header>
