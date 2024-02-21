@@ -4,3 +4,7 @@ export interface Pagination<T> {
   pageCount: number
   data: T
 }
+
+export interface CategoryData<T> {
+  data: T
+}
